@@ -56,7 +56,7 @@ fi
 function blob_fixup() {
     case "${1}" in
         vendor/lib64/camera/components/com.qti.node.watermark.so)
-            ${PATCHELF} --add-needed "libpiex_shim.so" "${2}"
+            grep -q "libpiex_shim.so" "${2}" || "${PATCHELF}" --add-needed "libpiex_shim.so" "${2}"
             ;;
         vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc)
             grep -q "task_profiles" "${2}" || sed -i "s|writepid /dev/cpuset/foreground/tasks|task_profiles ProcessCapacityHigh HighPerformance|g" "${2}"
