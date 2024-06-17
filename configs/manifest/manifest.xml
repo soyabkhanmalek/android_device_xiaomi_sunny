@@ -222,7 +222,8 @@
         <fqname>@2.2::IFactory/default</fqname>
         <fqname>@2.3::IFactory/default</fqname>
     </hal>
-        <hal format="hidl">
+    <!--
+    <hal format="hidl">
         <name>vendor.qti.qspmhal</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -231,6 +232,7 @@
             <instance>default</instance>
         </interface>
     </hal>
+    -->
     <hal format="hidl">
         <name>vendor.qti.hardware.bluetooth_audio</name>
         <transport>hwbinder</transport>
