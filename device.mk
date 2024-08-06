@@ -144,6 +144,10 @@ TARGET_GPS_COMPONENT_VARIANT := gps
 PRODUCT_PACKAGES += \
     android.hardware.health-service.qti
 
+# Init
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/init/init.qcom.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.rc
+
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
