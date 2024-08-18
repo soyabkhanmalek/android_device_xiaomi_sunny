@@ -101,6 +101,8 @@ PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor
 
+TARGET_USE_AIDL_QTI_MEMTRACK := true
+
 # DisplayConfig
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/displayconfig/display_id_4630946773257169537.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946773257169537.xml
